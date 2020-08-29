@@ -11,6 +11,26 @@ class ThirdWithParams extends StatefulWidget {
 class ThirdWithParamsState extends State<ThirdWithParams> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text("ThirdWithParams : ${widget.param}")));
+    FlatButton buttonWithParam = FlatButton(
+      color: Colors.blue,
+      textColor: Colors.white,
+      child: Text("Go back with param"),
+      onPressed: () {
+        Navigator.pop(context, "Hello from third!");
+      },
+    );
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Third"),
+      ),
+      body: Center(
+          child: Column(
+        children: [
+          Text("ThirdWithParams : ${widget.param}"),
+          buttonWithParam,
+        ],
+      )),
+    );
   }
 }
