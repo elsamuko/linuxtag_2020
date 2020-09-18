@@ -23,6 +23,11 @@ https://flutter.dev/docs/get-started/install/linux
 * `flutter doctor`
 * `flutter create`
 
+## emulator
+* `flutter emulators`
+* `flutter emulators --create`
+* `flutter emulators --launch flutter_emulator`
+
 ## App
 * MaterialApp
   * Theme
@@ -30,5 +35,8 @@ https://flutter.dev/docs/get-started/install/linux
 * Widgets → StatefulWidget
   * setState
 * Navigator with parameters
+
+## Testing
+* `flutter test`
 
 ## Debugging
