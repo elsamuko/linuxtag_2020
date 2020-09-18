@@ -22,6 +22,7 @@ https://flutter.dev/docs/get-started/install/linux
 ## flutter command line
 * `flutter doctor`
 * `flutter create`
+* pubspec.yaml → `flutter pub get`
 
 ## emulator
 * `flutter emulators`
@@ -38,5 +39,6 @@ https://flutter.dev/docs/get-started/install/linux
 
 ## Testing
 * `flutter test`
+* test driver → `flutter drive --target=test_driver/screenshot.dart`
 
 ## Debugging

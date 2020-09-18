@@ -26,6 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
         color: Colors.blue,
         textColor: Colors.white,
         child: Text("Go to second"),
+        key: Key("second"),
         onPressed: () {
           Navigator.of(context).push(MaterialPageRoute<Second>(builder: (BuildContext context) {
             return Second();
