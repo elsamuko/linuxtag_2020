@@ -24,6 +24,7 @@ https://flutter.dev/docs/get-started/install/linux
 ## Flutter command line
 * `flutter doctor`
 * `flutter create`
+* `flutter run`
 * pubspec.yaml → `flutter pub get`
 
 ## Emulator
