@@ -22,6 +22,14 @@ Future<String> GET(String url) async {
   return utf8.decoder.bind(response).first;
 }
 
+void json() {
+  List<String> names = ["Hase","Baum"];
+  print(jsonEncode(names));
+
+  names = jsonDecode("[\"Hase\", \"Baum\"]").cast<String>();
+  print(names);
+}
+
 int main() {
   // stdout
   print("Hello Dart");
@@ -42,6 +50,8 @@ int main() {
 
   // HTTP
   // print(await GET("http://icanhazip.com/"));
+
+  json();
 
   print("EOF");
   return 0;
