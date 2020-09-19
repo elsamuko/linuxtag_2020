@@ -18,6 +18,8 @@ https://flutter.dev/docs/get-started/install/linux
 * dart scripting
 * list, maps, files, print
 * async, await
+* http
+* json
 
 ## flutter command line
 * `flutter doctor`
