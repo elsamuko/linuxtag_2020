@@ -21,12 +21,12 @@ https://flutter.dev/docs/get-started/install/linux
 * http
 * json
 
-## flutter command line
+## Flutter command line
 * `flutter doctor`
 * `flutter create`
 * pubspec.yaml → `flutter pub get`
 
-## emulator
+## Emulator
 * `flutter emulators`
 * `flutter emulators --create`
 * `flutter emulators --launch flutter_emulator`
@@ -39,8 +39,16 @@ https://flutter.dev/docs/get-started/install/linux
   * setState
 * Navigator with parameters
 
+## Debugging
+
 ## Testing
 * `flutter test`
 * test driver → `flutter drive --target=test_driver/screenshot.dart`
 
-## Debugging
+## Deployment
+* `flutter build appbundle --no-shrink`
+* `flutter build apk --no-shrink --split-per-abi`
+* https://flutter.dev/docs/deployment/android#configure-signing-in-gradle
+* https://github.com/elsamuko/clusterup
+* https://play.google.com/store/apps/details?id=com.devsamuko.clusterup
+
