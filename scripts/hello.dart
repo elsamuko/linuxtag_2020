@@ -35,6 +35,8 @@ int main() {
   print("Hello Dart");
 
   // lists
+  List l = [1,2,3];
+
   [1, 2, 3, 4, 5].forEach((element) {
     print("Hello ${element}");
   });
