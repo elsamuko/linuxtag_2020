@@ -3,15 +3,15 @@ import 'second.dart';
 import 'third_with_params.dart';
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
-  String fromThird;
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String fromThird = "";
 
   void _incrementCounter() {
     setState(() {
@@ -22,9 +22,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     List<Widget> widgets = [
-      FlatButton(
-        color: Colors.blue,
-        textColor: Colors.white,
+      TextButton(
+        style: TextButton.styleFrom(
+          primary: Colors.white,
+          backgroundColor: Colors.blue,
+        ),
         child: Text("Go to second"),
         key: Key("second"),
         onPressed: () {
@@ -33,15 +35,21 @@ class _MyHomePageState extends State<MyHomePage> {
           }));
         },
       ),
-      FlatButton(
-        color: Colors.blue,
-        textColor: Colors.white,
+      TextButton(
+        style: TextButton.styleFrom(
+          primary: Colors.white,
+          backgroundColor: Colors.blue,
+        ),
         child: Text("Go to third with param"),
         onPressed: () async {
-          widget.fromThird =
-              await Navigator.of(context).push(MaterialPageRoute<String>(builder: (BuildContext context) {
+          String? rv = await Navigator.of(context).push(MaterialPageRoute<String>(builder: (BuildContext context) {
             return ThirdWithParams("Hello");
           }));
+          if (rv != null) {
+            fromThird = rv;
+          } else {
+            fromThird = "";
+          }
           setState(() {});
         },
       ),
@@ -53,9 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       )
     ];
 
-    if (widget.fromThird != null) {
-      widgets.add(Text(widget.fromThird));
-    }
+    widgets.add(Text(fromThird));
 
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
