@@ -55,4 +55,6 @@ https://flutter.dev/docs/get-started/install/linux
 * https://flutter.dev/docs/deployment/android#configure-signing-in-gradle
 * https://github.com/elsamuko/clusterup
 * https://play.google.com/store/apps/details?id=com.devsamuko.clusterup
+* https://github.com/elsamuko/bbtraining
+* https://play.google.com/store/apps/details?id=com.devsamuko.bbtraining
 
